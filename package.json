@@ -1,7 +1,7 @@
 {
   "name": "cli-starter",
   "version": "0.5.0",
-  "main": "cli.js",
+  "main": "./build/cli.js",
   "license": "MIT",
   "repository": {
     "type": "git",
