@@ -1,18 +1,16 @@
 {
   "name": "cli-starter",
   "version": "0.5.0",
-  "main": "./build/cli.js",
+  "main": "build/cli.js",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/servexyz/cli-starter"
   },
   "bin": {
-    "cli-starter": "./build/cli.js"
+    "cstar": "build/cli.js"
   },
-  "files": [
-    "./build/cli.js"
-  ],
+  "files": ["build/cli.js"],
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
     "@babel/core": "^7.0.0-beta.39",
@@ -25,7 +23,7 @@
     "simple-start": "./build/cli.js unicorns --rainbow",
     "dev": "./cli.js unicorns --rainbow",
     "clean": "rm -rf build && mkdir build",
-    "build-cli": "babel -d ./build ./cli.js -s",
+    "build-cli": "babel -d ./build ./cli.js",
     "build": "npm run clean && npm run build-cli",
     "test": "ava"
   },
