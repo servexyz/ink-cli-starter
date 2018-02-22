@@ -30,5 +30,12 @@ npm run test
 
 ## Related
 
-* [@sindresorhus/meow](https://github.com/sindresorhus/meow)
+**Internal**
+
 * [@servexyz/npm-starter](https://github.com/servexyz/npm-starter)
+* [@servexyz/service-starter](https://github.com/servexyz/service-starter)
+
+**External**
+
+* [@sindresorhus/meow](https://github.com/sindresorhus/meow)
+* [@chalk/chalk](https://github.com/chalk/chalk)
