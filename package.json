@@ -19,6 +19,7 @@
     "@babel/preset-env": "^7.0.0-beta.39",
     "ava": "^1.0.0-beta.1",
     "chmod": "^0.2.1",
+    "trevor": "^2.3.0",
     "webdash": "^1.2.0",
     "webdash-npm-scripts": "^1.2.0",
     "webdash-package-json": "^1.2.0"
@@ -31,8 +32,9 @@
     "clean": "rm -rf build && mkdir build",
     "build-cli": "babel -d ./build ./cli.js",
     "build": "npm run clean && npm run build-cli",
+    "ci:local": "trevor",
     "webd": "npx webdash serve"
-      },
+  },
   "babel": {
     "presets": [
       [
