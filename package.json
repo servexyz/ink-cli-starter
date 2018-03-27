@@ -10,23 +10,29 @@
   "bin": {
     "cstar": "build/cli.js"
   },
-  "files": ["build/cli.js"],
+  "files": [
+    "build/cli.js"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
     "@babel/core": "^7.0.0-beta.39",
     "@babel/preset-env": "^7.0.0-beta.39",
     "ava": "^1.0.0-beta.1",
-    "chmod": "^0.2.1"
+    "chmod": "^0.2.1",
+    "webdash": "^1.2.0",
+    "webdash-npm-scripts": "^1.2.0",
+    "webdash-package-json": "^1.2.0"
   },
   "scripts": {
+    "test": "ava",
     "start": "npm run build && npm run simple-start",
     "simple-start": "./build/cli.js unicorns --rainbow",
     "dev": "./cli.js unicorns --rainbow",
     "clean": "rm -rf build && mkdir build",
     "build-cli": "babel -d ./build ./cli.js",
     "build": "npm run clean && npm run build-cli",
-    "test": "ava"
-  },
+    "webd": "npx webdash serve"
+      },
   "babel": {
     "presets": [
       [
