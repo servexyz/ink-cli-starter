@@ -1,14 +1,25 @@
 #!/usr/bin/env node
 const log = console.log;
 
-const meow = require("meow");
+const meow = require('meow');
 
-const chalk = require("chalk");
+const chalk = require('chalk');
 
-const pretty = (input, flags) => {
-  log(`input: ${input} \n ${flags}`);
-};
+const {
+  h,
+  render,
+  Component,
+  Text
+} = require('ink');
 
+const importJsx = require('import-jsx');
+
+const {
+  Demo
+} = importJsx('./components/hello.js');
+const {
+  AutoDemo
+} = importJsx('./components/search.js');
 let c = meow(`
     Usage
         $ respace <input>
@@ -21,9 +32,10 @@ let c = meow(`
 `, {
   flags: {
     config: {
-      type: "string",
-      alias: "c"
+      type: 'string',
+      alias: 'c'
     }
   }
-});
-pretty(c.input[0], c.flags);
+}); //render(h(Demo, c.flags));
+
+render(h(AutoDemo, null)); //foo(c.input[0], c.flags);
