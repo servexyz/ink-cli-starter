@@ -27,4 +27,3 @@ let c = meow(`
   }
 });
 pretty(c.input[0], c.flags);
-//# sourceMappingURL=cli.js.map

@@ -3,10 +3,12 @@
 const log = console.log;
 const meow = require("meow");
 const chalk = require("chalk");
+const hello = require('./components/hello.js');
 
 const pretty = (input, flags) => {
   log(`input: ${input} \n ${flags}`);
 };
+
 let c = meow(
   `
     Usage
@@ -29,3 +31,4 @@ let c = meow(
 );
 
 pretty(c.input[0], c.flags);
+
