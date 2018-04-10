@@ -1,0 +1,21 @@
+{
+  "name": "ink-cli-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@alechp:servexyz/ink-cli-starter",
+  "author": "alechp <me@alechp.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "backpack",
+    "build": "backpack build"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "backpack-core": "^0.7.0"
+  },
+  "dependencies": {
+    "ink": "^0.4.1",
+    "ink-router": "^0.6.0"
+  }
+}

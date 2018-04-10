@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "backpack-core/babel",
+  ], 
+  "plugins": [
+    [
+      "transform-react-jsx",
+      {
+        "pragma": "h"
+      }
+    ]
+  ]
+}
