@@ -62,59 +62,77 @@ module.exports =
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__(1);
-
+module.exports = require("ink");
 
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-const { h, render, Component, Text } = __webpack_require__(2);
+module.exports = __webpack_require__(2);
 
-class Counter extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      i: 0
-    };
-  }
-  render() {
-    return h(
-      Text,
-      { green: true },
-      this.state.i,
-      ' tests passed'
-    );
-  }
-
-  componentDidMount() {
-    this.timer = setInterval(() => {
-      this.setState({
-        i: this.state.i + 1
-      });
-    }, 100);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timer);
-  }
-}
-
-render(h(Counter, null));
 
 /***/ }),
 /* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ink__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ink___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ink__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ink_router__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ink_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_ink_router__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__c_App__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__c_Foo__ = __webpack_require__(5);
+//const {h, render, Component, Text} = require('ink');
+
+
+
+
+
+Object(__WEBPACK_IMPORTED_MODULE_0_ink__["render"])(Object(__WEBPACK_IMPORTED_MODULE_0_ink__["h"])(
+  __WEBPACK_IMPORTED_MODULE_1_ink_router__["Router"],
+  null,
+  Object(__WEBPACK_IMPORTED_MODULE_0_ink__["h"])(__WEBPACK_IMPORTED_MODULE_2__c_App__["a" /* default */], null),
+  Object(__WEBPACK_IMPORTED_MODULE_0_ink__["h"])(__WEBPACK_IMPORTED_MODULE_3__c_Foo__["a" /* default */], { name: 'Alec' })
+));
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports) {
 
-module.exports = require("ink");
+module.exports = require("ink-router");
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ink__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ink___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ink__);
+
+
+const App = (props, context) => 'Hello World';
+
+/* harmony default export */ __webpack_exports__["a"] = (App);
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ink__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ink___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_ink__);
+
+const Foo = ({ name }, context) => `Hello ${name}`;
+
+/* harmony default export */ __webpack_exports__["a"] = (Foo);
 
 /***/ })
 /******/ ]);

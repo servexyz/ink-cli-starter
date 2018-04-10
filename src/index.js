@@ -1,28 +1,13 @@
-const {h, render, Component, Text} = require('ink');
+//const {h, render, Component, Text} = require('ink');
+import {h, render, Component, Text} from 'ink';
+import { Router } from 'ink-router';
+import App from './c/App';
+import Foo from './c/Foo';
 
-class Counter extends Component {
-  constructor() {
-    super();
+render (
+  <Router>
+    <App /> 
+    <Foo name="Alec" />
+  </Router>
+)
 
-    this.state = {
-      i: 0,
-    };
-  }
-  render() {
-    return <Text green>{this.state.i} tests passed</Text>;
-  }
-
-  componentDidMount() {
-    this.timer = setInterval(() => {
-      this.setState({
-        i: this.state.i + 1,
-      });
-    }, 100);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timer);
-  }
-}
-
-render(<Counter />);
