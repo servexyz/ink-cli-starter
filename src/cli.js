@@ -1,35 +1,16 @@
-#!/usr/bin/env node
-
+import chalk from "chalk";
+import { h, render } from "ink";
+import { Switch, Route, CommandLineRouter as Router} from 'ink-router';
+import Home from './c/Home';
+import Foo from './c/Foo';
 const log = console.log;
-const meow = require('meow');
-const chalk = require('chalk');
-const { h, render, Component, Text} = require('ink');
-const importJsx = require('import-jsx');
-const { Demo } = importJsx('./components/hello.js');
-const { AutoDemo } = importJsx('./components/search.js');
 
+render (
+  <Router>
+    <Switch>
+      <Route exact path="/" component={Home} />
+      <Route path="/foo" component={Foo} {...this.props.args}/>
+    </Switch>
+  </Router>
+)
 
-let c = meow(
-  `
-    Usage
-        $ respace <input>
-
-      Options
-        --config, -c  Generate repospace from config
-
-      Examples
-        $ respace -config my-config.js
-`,
-  {
-    flags: {
-      config: {
-        type: 'string',
-        alias: 'c',
-      },
-    },
-  },
-);
-
-//render(h(Demo, c.flags));
-render(<AutoDemo />);
-//foo(c.input[0], c.flags);
