@@ -3,8 +3,10 @@
 import chalk from "chalk";
 import { h, render } from "ink";
 import { Switch, Route, Router} from 'ink-router';
-import Home from './c/Home.js';
-import Foo from './c/Foo.js';
+import jsx from 'import-jsx';
+
+const Home = jsx('./c/Home.js');
+const Foo = jsx('./c/Foo.js');
 const log = console.log;
 
 render (
