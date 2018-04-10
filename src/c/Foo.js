@@ -1,4 +1,5 @@
-export default ({ props }) => (
-  <h2>{...props}</h2>
-)
+import { h, render } from 'ink';
 
+const Foo = (props, context) => 'Hello World';
+
+export default Foo;

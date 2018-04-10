@@ -36,7 +36,7 @@
   "scripts": {
     "test": "ava",
     "start": "npm run build && npm run simple-start",
-    "simple-start": "./build/cli.js hello world",
+    "simple-start": "./build/cli.js foo",
     "clean": "rm -rf build && mkdir build",
     "build-cli": "babel -d ./build ./src",
     "build": "npm run clean && npm run build-cli",

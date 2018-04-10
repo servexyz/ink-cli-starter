@@ -1,16 +1,19 @@
+#!/usr/bin/env node
+
 import chalk from "chalk";
 import { h, render } from "ink";
-import { Switch, Route, CommandLineRouter as Router} from 'ink-router';
-import Home from './c/Home';
-import Foo from './c/Foo';
+import { Switch, Route, Router} from 'ink-router';
+import Home from './c/Home.js';
+import Foo from './c/Foo.js';
 const log = console.log;
 
 render (
-  <Router>
+  <Router initialEntries={['/', '/foo']}>
     <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/foo" component={Foo} {...this.props.args}/>
+      <Route exact path="/" component={Home} to="/foo" />
+      <Route path="/foo" component={Foo} />
     </Switch>
   </Router>
 )
 
+//<Route path="/foo" component={Foo} {...this.props.args}/>

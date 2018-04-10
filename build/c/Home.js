@@ -22,12 +22,6 @@ class Home extends _ink.Component {
     }, _temp;
   }
 
-  getChildContext() {
-    return {
-      name: "Alec"
-    };
-  }
-
   componentDidMount() {
     this.timeout = setTimeout(this.redirect, this.props.delay);
   }
@@ -52,7 +46,8 @@ Home.propTypes = {
   })
 };
 Home.defaultProps = {
-  delay: 2000
+  delay: 2000,
+  to: "/foo"
 };
 
 var _default = (0, _inkRouter.withRouter)(Home);

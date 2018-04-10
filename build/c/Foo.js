@@ -5,8 +5,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _default = ({
-  props
-}) => h("h2", null, {...props});
+var _ink = require("ink");
 
+const Foo = (props, context) => 'Hello World';
+
+var _default = Foo;
 exports.default = _default;
