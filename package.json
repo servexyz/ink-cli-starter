@@ -1,6 +1,6 @@
 {
   "name": "ink-cli-starter",
-  "version": "1.0.0",
+  "version": "0.5.0",
   "main": "index.js",
   "repository": "git@alechp:servexyz/ink-cli-starter",
   "author": "alechp <me@alechp.com>",
