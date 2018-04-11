@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "ink": "^0.4.1",
+    "ink-link": "^0.2.0",
     "ink-router": "^0.6.0"
   }
 }
